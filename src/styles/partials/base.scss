@@ -1,4 +1,4 @@
-@import '../modules/variables.scss';
+// @import '../modules/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -12,8 +12,6 @@
 html {
   font-size: 16px;
 
-  background-color: $background-color;
-
   @include media(">desktop") {
     // everything calculated will scale fluidly after medium breakpoint
     font-size: calc(12px + 0.4vw);
@@ -25,15 +23,10 @@ svg {
 }
 
 body {
-  cursor: none;
   font-size: to-rem(14px);
-  font-weight: $base-lighter-font-weight;
-
   line-height: 1.4;
-  color: $primary-color;
 
   z-index: 2;
-
   margin: auto;
 
   @include media('>phone') {
