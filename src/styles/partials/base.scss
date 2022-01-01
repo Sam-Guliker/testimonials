@@ -1,0 +1,88 @@
+@import '../modules/variables.scss';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 16px;
+
+  background-color: $background-color;
+
+  @include media(">desktop") {
+    // everything calculated will scale fluidly after medium breakpoint
+    font-size: calc(12px + 0.4vw);
+  }
+}
+
+svg {
+  width: 100%;
+}
+
+body {
+  cursor: none;
+  font-size: to-rem(14px);
+  font-weight: $base-lighter-font-weight;
+
+  line-height: 1.4;
+  color: $primary-color;
+
+  z-index: 2;
+
+  margin: auto;
+
+  @include media('>phone') {
+    min-height: 100vh;
+  }
+}
+
+img {
+  max-width: 100%;
+  padding-bottom: to-rem(20px);
+}
+.word-break {
+  display: block;
+}
+
+.container {
+  position: relative;
+  padding: to-rem(20px);
+  z-index: 4;
+
+  @include media('>desktop') { 
+    padding: 0 to-rem(120px);
+    padding-top: to-rem(160px);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+}
+
+a:hover {
+  cursor: none;
+}
+
+.section {
+  padding-bottom: to-rem(66px);
+  z-index: 4;
+
+  &:first-of-type {
+    padding-top: to-rem(0px);
+  }
+
+  @include media('>desktop') { 
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    padding-bottom: to-rem(190px);
+  }
+}
