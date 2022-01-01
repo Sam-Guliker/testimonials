@@ -23,8 +23,11 @@ svg {
 }
 
 body {
+  background-color: $light-gray-blue;
   font-size: to-rem(14px);
   line-height: 1.4;
+  color: $white;
+  font-family: $primary-font;
 
   z-index: 2;
   margin: auto;
@@ -36,8 +39,8 @@ body {
 
 img {
   max-width: 100%;
-  padding-bottom: to-rem(20px);
 }
+
 .word-break {
   display: block;
 }
@@ -53,10 +56,9 @@ img {
   }
 }
 
-main {
-  position: relative;
-  z-index: 3;
-  height: 100vh;
+.main {
+  padding: to-rem(60px) to-rem(20px);
+
 }
 
 a:hover {

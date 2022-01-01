@@ -1,11 +1,7 @@
-import React, { ReactNode, ReactElement } from 'react'
+import React, { ReactNode } from 'react'
 
 type TestimonialProps = { children: ReactNode }
 
-function TestimonialContainer({children}: TestimonialProps): ReactElement | null {
-    return (
-        <main className="main">{children}</main>
-    )
-}
+const TestimonialContainer = ({children}: TestimonialProps): JSX.Element | null => <main className="main">{children}</main>
 
 export default TestimonialContainer

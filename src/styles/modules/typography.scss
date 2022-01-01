@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 p, input, span, a {
     line-height: 1.4;
     text-decoration: none;
+    padding-bottom: to-rem(20px);
 }
 
 .heading-01 { 
@@ -19,16 +20,30 @@ p, input, span, a {
 }
 
 .heading-02 {
-    font-size: to-rem(24px);
-    padding-bottom: to-rem(12px);
-    font-weight: 400;
+    font-size: to-rem(15px);
+    padding-bottom: to-rem(0px);
+    font-weight: $font-bold;
 }
 
 .heading-03 {
-    font-size: to-rem(18px);
-    font-weight: 500;
+    font-size: to-rem(13px);
+    padding-bottom: to-rem(3px);
+    font-weight: $base-font-size;
+    opacity: 0.7;
 }
 
+.paragraph {
+    opacity: 0.7;
+    font-size: to-rem(13px);
+}
+
+.paragraph-highlight {
+    position: relative;
+    opacity: 1;
+    font-size: to-rem(20px);
+    line-height: 1.2;
+    z-index: 1;
+}
 .product-title {
     font-size: to-rem(36px);
     font-weight: bold;
