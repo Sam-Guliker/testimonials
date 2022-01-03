@@ -20,21 +20,27 @@ p, input, span, a {
 }
 
 .heading-02 {
-    font-size: to-rem(15px);
+    font-size: 13px;
     padding-bottom: to-rem(0px);
     font-weight: $font-bold;
+
+    opacity: 0.9;
 }
 
 .heading-03 {
-    font-size: to-rem(13px);
+    font-size: 12px;
     padding-bottom: to-rem(3px);
     font-weight: $base-font-size;
     opacity: 0.7;
 }
 
 .paragraph {
-    opacity: 0.7;
+    opacity: 0.5;
     font-size: to-rem(13px);
+
+    @include media('>tablet') { 
+        font-size: 12px;
+    }
 }
 
 .paragraph-highlight {
@@ -43,6 +49,11 @@ p, input, span, a {
     font-size: to-rem(20px);
     line-height: 1.2;
     z-index: 1;
+
+    @include media('>tablet') { 
+        font-size: 19px;
+        line-height: 1.1;
+    }
 }
 .product-title {
     font-size: to-rem(36px);

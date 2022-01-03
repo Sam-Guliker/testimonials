@@ -32,8 +32,13 @@ body {
   z-index: 2;
   margin: auto;
 
-  @include media('>phone') {
+  @include media('>tablet') {
     min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: auto;
+    
+    font-size: 13px;
   }
 }
 
@@ -56,9 +61,30 @@ img {
   }
 }
 
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
 .main {
   padding: to-rem(60px) to-rem(20px);
 
+  @include media('>tablet') { 
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 260px;
+    max-width: 73%;
+    margin: auto;
+
+    column-gap: to-rem(23px);
+    row-gap: to-rem(23px);
+
+    grid-template-areas:
+      "blockOne blockOne blockTwo blockFive"
+      "blockThree blockFour blockFour blockFive";
+  }
 }
 
 a:hover {

@@ -6,14 +6,22 @@
     margin-bottom: to-rem(30px);
     border-radius: to-rem(10px) to-rem(10px);
 
+    @include media('>tablet') {
+        margin-bottom: 0;
+    }
+
     .header {
         display: flex;
         padding-bottom: to-rem(16px);
         align-items: center;
+
+        @include media('>tablet') { 
+            padding-bottom: to-rem(14px);
+        }
     }
     
     .image {
-        width: to-rem(33px);
+        width: to-rem(26px);
         border-radius: to-rem(100px) to-rem(100px);
         border: 2px solid $light-gray;
         vertical-align: middle;
@@ -24,6 +32,10 @@
         right: to-rem(30px);
         top: 0;
         z-index: 0;
+
+        @include media('>tablet') {
+            right: to-rem(70px);
+        }
     }
 
     .user-details {
@@ -37,14 +49,39 @@
     &:nth-child(1) {
         padding-right: to-rem(46px);
         background-color: $moderate-violet;
+
+        @include media('>tablet') { 
+            grid-area: blockOne;
+        }
     }
     
     &:nth-child(2){
         background-color: $dark-gray-blue;
+
+        @include media('>tablet') { 
+            grid-area: blockTwo;
+        }
+    }
+
+    &:nth-child(3) {
+        @include media('>tablet') { 
+            grid-area: blockThree;
+            box-shadow: 8px 17px 36px -21px rgba(0,0,0,0.33);        }
     }
 
     &:nth-child(4){
         background-color: $dark-black-blue;
+
+        @include media('>tablet') { 
+            grid-area: blockFour;
+        }
+    }
+
+    &:nth-child(5){
+        @include media('>tablet') { 
+            grid-area: blockFive;
+            box-shadow: 8px 17px 36px -21px rgba(0,0,0,0.33);
+        }
     }
 
     &:nth-child(3),
