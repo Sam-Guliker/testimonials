@@ -50,8 +50,6 @@ Working with typescript I found out that I can use a container function that
 renders it children components. Next to that I'm happy with the result creating a 
 oneliner for it.
 
-To see how you can add code snippets, see below:
-
 ```js
 import React, { ReactNode } from 'react'
 
