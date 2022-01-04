@@ -13,7 +13,7 @@ type CardProps = {
 
 function Card({name, image, role, highlightParagraph, paragraph, quote}: CardProps) {
     return (
-        <section className="card-container">
+        <div className="card-container">
           <header className="header">
             {quote && <img className="quote" src={quoteImage}  alt={quoteImage} />}
             <div className="image-container">
@@ -26,7 +26,7 @@ function Card({name, image, role, highlightParagraph, paragraph, quote}: CardPro
           </header>
             <p className="paragraph paragraph-highlight">{highlightParagraph}</p>
             <p className="paragraph">{paragraph}</p>
-        </section>
+        </div>
     )
 }
 
