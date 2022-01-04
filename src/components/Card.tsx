@@ -15,7 +15,7 @@ function Card({name, image, role, highlightParagraph, paragraph, quote}: CardPro
     return (
         <section className="card-container">
           <header className="header">
-            {quote && <img className="quote" src={quoteImage}  alt="quote" />}
+            {quote && <img className="quote" src={quoteImage}  alt={quoteImage} />}
             <div className="image-container">
               <img className="image" src={image} alt="photo" />
             </div>
